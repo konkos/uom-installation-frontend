@@ -1,0 +1,11 @@
+.packageList{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.package-item{
+    align-self: center;
+    padding: 5px;
+    margin: 5px;
+    background-color: red;
+}
