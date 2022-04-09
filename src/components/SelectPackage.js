@@ -65,8 +65,9 @@ function addItemToArray(array, n) {
   }
 
   const savePackageList = () =>{
-    localStorage.setItem("packages",JSON.stringify(l2));
-    
+    let temp = [];
+    l2.forEach(item => temp.push(item))
+    sessionStorage.setItem("packages",temp);    
   }
 
   useEffect(()=>{

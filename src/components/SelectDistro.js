@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function SelectDistro() {
 
-    const distros = ["Mint", "Ubuntu", "Fedora", "OpenSuse", ""];
+    const distros = ["","Mint", "Ubuntu", "Fedora", "OpenSuse"];
 
     const [distroOption, setdistroOption] = useState(distros[0]);
 
@@ -16,6 +16,10 @@ export default function SelectDistro() {
     //     console.log(e.target.value);
     // }
 
+    useEffect(() => {
+      window.sessionStorage.setItem("distro", distroOption);
+    }, [distroOption])
+    
   return (
       <div>
             <label>
